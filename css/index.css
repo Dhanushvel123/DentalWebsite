@@ -1,0 +1,441 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    position: relative;
+}
+
+/* Form Styling */
+.appointment-form {
+    width: 180%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Right Side Image */
+.dentist-image {
+    max-width: 80%;
+    height: 400px;
+    background: url('/Images/bg-hero-illustration-bluedouble-800x912.png') no-repeat center center/cover;
+
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    .hero-section {
+        text-align: center;
+    }
+   
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+    .appointment-form {
+        margin-top: 0;
+        width: 100%;
+    }
+    .dentist-image {
+        max-width: 100%;
+    }
+   
+}
+
+@media (max-width: 576px) {
+    .appointment-form {
+        padding: 15px;
+    }
+   
+}
+.dental-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10%;
+}
+.dental-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.dental-content {
+    padding-left: 50px;
+}
+.dental-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.dental-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+.dental-list li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+.dental-list li::before {
+    content: '\2713';
+    color: blue;
+    font-weight: bold;
+    margin-right: 10px;
+}
+@media (max-width: 991px) {
+    .dental-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .dental-content {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    background: url('/Images/bg-hero-illustration-bluedouble-800x912.png.png') no-repeat center center/cover;
+    padding: 50px 0;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.image-container {
+    position: relative;
+}
+
+.main-dentist {
+    width: 100%;
+    max-width: 400px;
+}
+
+.small-circle {
+    position: absolute;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-left {
+    top: -10px;
+    left: -20px;
+}
+
+.bottom-right {
+    bottom: -10px;
+    right: -20px;
+}
+
+.info-section {
+    margin-top: 50px;
+}
+
+.info-section h4 {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .text-content h1 {
+        font-size: 2rem;
+    }
+
+    .image-container .small-circle {
+        width: 80px;
+    }
+}
+.service-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-text {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .service-text {
+        min-height: 150px;
+    }
+}
+.service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.service-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover .service-text-overlay {
+    opacity: 1;
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 20px;
+    }
+}
+/* Contact Us Section */
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.contact-btn {
+    background: none;
+    border: 1px solid #0056b3;
+    color: #0056b3;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.contact-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+}
+
+.contact-text {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Image Styling */
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        text-align: center;
+    }
+
+    .contact-title {
+        font-size: 28px;
+    }
+
+    .contact-image {
+        margin-top: 20px;
+    }
+}
+/* Blogs Section */
+.blogs-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.blogs-btn {
+    background: none;
+    border: 1px solid #0056b3;
+    color: #0056b3;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.blogs-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+}
+
+.blogs-text {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Blog Cards */
+.blog-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.blog-card .category {
+    font-size: 14px;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.blog-card h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blogs-section {
+        text-align: center;
+    }
+
+    .blogs-title {
+        font-size: 28px;
+    }
+
+    .blog-card {
+        margin-bottom: 20px;
+    }
+}
+/* Book Appointment Section */
+.appointment-section {
+    background-color: #EEF4FE; /* Light blue background */
+    padding: 80px 0;
+    background-image: url("/Images/bg-hero-illustration-bluedouble-800x912.png.png"); /* Add background image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.text-content {
+    text-align: left;
+}
+
+.contact-btn {
+    background: none;
+    border: 1px solid #0056b3;
+    color: #0056b3;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.appointment-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.appointment-text {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #003c80;
+}
+
+.appointment-image {
+   
+ 
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .appointment-section {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .appointment-title {
+        font-size: 28px;
+    }
+
+    .appointment-text {
+        font-size: 14px;
+    }
+
+    .appointment-image {
+        margin-top: 30px;
+    }
+}
