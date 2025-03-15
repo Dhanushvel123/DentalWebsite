@@ -3,6 +3,161 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-menu li {
+    padding: 5px 10px;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Appointment Button */
+.appointment-btn {
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablet */
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        box-shadow: none;
+        background: none;
+    }
+
+    .appointment-btn {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+
 /* Hero Section */
 .hero-section {
     background-color: #f8f9fa;
@@ -19,9 +174,9 @@ body {
 
 /* Right Side Image */
 .dentist-image {
-    max-width: 80%;
-    height: 400px;
-    background: url('/Images/bg-hero-illustration-bluedouble-800x912.png') no-repeat center center/cover;
+    max-width: 100%;
+    background: url("/Images/dentist-image.jpg") center no-repeat center ;
+    height: 600px;
 
 }
 
@@ -99,8 +254,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.hero-section {
-    background: url('/Images/bg-hero-illustration-bluedouble-800x912.png.png') no-repeat center center/cover;
+.about-section {
     padding: 50px 0;
 }
 
@@ -162,70 +316,216 @@ body {
         width: 80px;
     }
 }
-.service-img {
-    height: 100%;
-    object-fit: cover;
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
 }
 
-.service-text {
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+/* Statistics Section */
+.statistics {
+    padding: 60px 0;
 }
-@media (max-width: 768px) {
-    .service-text {
-        min-height: 150px;
+
+.stat-box {
+    background: #f1f8ff;
+    padding: 20px 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Icons */
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+/* Text */
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+h3 span {
+    color: #007bff;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablet */
+    .stat-box {
+        padding: 15px;
+    }
+
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 15px;
     }
 }
+
+@media (max-width: 768px) { /* Mobile */
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-box {
+        width: 90%;
+        margin-bottom: 15px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+
+/* Our Services Section */
+.our-services {
+    padding: 20px 0;
+}
+
+/* Section Heading */
+.services-subtitle {
+    color: #0056b3;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.services-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+}
+
+.services-description {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Service Cards */
 .service-card {
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service-img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-}
-
-.service-text-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    align-items: flex-end;
+    transition: transform 0.3s ease-in-out;
 }
 
-.service-card:hover .service-text-overlay {
-    opacity: 1;
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Service Card Content */
+.service-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    border-radius: 8px;
+    width: 50%;
+    margin: 2px;
 }
 
 .service-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+.service-content h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.service-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Learn More Button */
+.learn-more {
+    font-size: 14px;
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;  
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablet */
+    .services-title {
+        font-size: 30px;
+    }
+
+    .services-description {
+        font-size: 15px;
+    }
+
     .service-card {
-        margin-bottom: 20px;
+        height: 250px;
     }
 }
+
+@media (max-width: 768px) { /* Mobile */
+    .services-title {
+        font-size: 28px;
+    }
+
+    .services-description {
+        font-size: 14px;
+    }
+
+    .service-card {
+        height: 200px;
+    }
+
+    .service-content {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* Contact Us Section */
 .contact-section {
-    background-color: #f8f9fa;
+    background-color: #f1f8ff;
     padding: 60px 0;
 }
 
@@ -250,7 +550,7 @@ body {
     margin-bottom: 20px;
 }
 
-.btn-primary {
+.cbc {
     background-color: #0056b3;
     border: none;
     padding: 10px 20px;
@@ -280,12 +580,25 @@ body {
         margin-top: 20px;
     }
 }
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
 /* Blogs Section */
 .blogs-section {
-    background-color: #f8f9fa;
     padding: 60px 0;
 }
 
+/* Blogs Button */
 .blogs-btn {
     background: none;
     border: 1px solid #0056b3;
@@ -294,81 +607,162 @@ body {
     font-size: 14px;
     border-radius: 20px;
     margin-bottom: 15px;
+    display: inline-block;
 }
 
+/* Blogs Title & Description */
 .blogs-title {
     font-size: 32px;
     font-weight: bold;
     color: #000;
+    text-align: center;
 }
 
 .blogs-text {
     color: #666;
+    text-align: center;
     margin-bottom: 30px;
 }
 
 /* Blog Cards */
 .blog-card {
     background: #fff;
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
-.blog-card img {
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Blog Images */
+.blog-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.blog-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 15px;
 }
 
-.blog-card .category {
-    font-size: 14px;
-    color: #0056b3;
+/* Category Tags */
+.category {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    background: #0056b3;
+    color: white;
+    font-size: 12px;
     font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 5px;
 }
 
+.category.news {
+color: blue;
+background-color: white;
+}
+
+.category.tips {
+    color: blue;
+    background-color: white;}
+
+.category.health {
+    color: blue;
+    background-color: white;}
+
+/* Blog Card Title */
 .blog-card h5 {
     font-size: 18px;
     font-weight: bold;
     color: #000;
-    margin-bottom: 10px;
+    margin-top: 15px;
 }
 
+/* Blog Card Description */
 .blog-card p {
     color: #666;
     font-size: 14px;
     margin-bottom: 15px;
 }
 
-.btn-primary {
+/* Read More Button */
+.bgb {
     background-color: #0056b3;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .blogs-section {
-        text-align: center;
-    }
-
+@media (max-width: 1024px) { /* Tablet */
     .blogs-title {
         font-size: 28px;
+    }
+
+    .blogs-text {
+        font-size: 16px;
     }
 
     .blog-card {
         margin-bottom: 20px;
     }
 }
+
+@media (max-width: 768px) { /* Mobile */
+    .blogs-section {
+        text-align: center;
+    }
+
+    .blogs-btn {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+
+    .blogs-title {
+        font-size: 26px;
+    }
+
+    .blogs-text {
+        font-size: 14px;
+    }
+
+    .blog-card {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .category {
+        left: 10px;
+        bottom: 8px;
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+
+    .blog-card h5 {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
 /* Book Appointment Section */
 .appointment-section {
-    background-color: #EEF4FE; /* Light blue background */
     padding: 80px 0;
-    background-image: url("/Images/bg-hero-illustration-bluedouble-800x912.png.png"); /* Add background image */
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -415,8 +809,9 @@ body {
 }
 
 .appointment-image {
-   
- 
+    /* background: url("/Images/appointment\ bg.png") center no-repeat center; */
+    width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
