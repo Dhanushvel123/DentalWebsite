@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dental Care - Always Smile</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <!-- Top Bar -->
@@ -20,36 +20,40 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="Images/logo 1.png" alt="Dental Logo" height="50"> DENTAL ALWAYS SMILE
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="Images/logo 1.png" alt="Dental Logo" height="50"> 
+                <span>DENTAL ALWAYS SMILE</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                         Page
-                        </a><ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#appointment">Appointment</a></li>
-                            <li><a class="dropdown-item" href="#blogs">Blogs</a></li>
-                            <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
-                          </ul>
-                    </li>
-                                  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-                <a href="#appointment" class="btn btn-primary ms-3">Make an Appointment</a>
-            </div>
+            
+            <!-- Menu Button for Mobile -->
+            <span class="menu-btn" onclick="toggleMenu()">☰</span>
+
+            <!-- Navbar Links -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" onclick="toggleDropdown()">Pages </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#appointment">Appointment</a></li>
+                        <li><a href="#blogs">Blogs</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <!-- Appointment Button -->
+            <a href="#appointment" class="btn btn-primary appointment-btn">Make an Appointment</a>
         </div>
     </nav>
+
     
     <!-- Hero Section -->
     <header class="hero-section position-relative">
@@ -84,8 +88,8 @@
                 </div>
 
                 <!-- Right Side: Image & Review -->
-                <div class="col-lg-6 text-center position-relative" style="background-color: rgb(161, 214, 236);;">
-                    <img src="Images/dentistlogo.png.png" alt="Dentist" class="img-fluid dentist-image">
+                <div class="col-lg-6 text-center position-relative" >
+                    <img src="Images/home bg.png" alt="Dentist" class="img-fluid dentist-image">
                     
                     
             </div>
@@ -100,7 +104,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="col-md-4">
-                <img src="Images/tools-150x150.png.png" alt="">
+                <img src="Images/flex icon.png" alt="">
                 <h4>Professional Dentist</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
@@ -112,13 +116,11 @@
         </div>
     </section>
  
-    <section class="hero-section">
+    <section class="about-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 position-relative image-container">
-                    <img src="Images/female-dentist-present-2-1.png.png" alt="Dentist" class="bg-dentist">
-                    <img src="Images/young-woman-getting-dental-treatment-dental-clinic--800x533.jpg.png" alt="Checkup" class="overlay-image top-left">
-                    <img src="Images/dentist-with-dental-tools-mirror-and-probe-checking-up-patient-teeth-at-dental-clinic-office-1-800x664.jpg.png" alt="Treatment" class="overlay-image bottom-right">
+                    <img src="Images/about bg.png" alt="">
                 </div>
                 <div class="col-md-6 text-content" id="about">
                     <h5 class="btn btn-light text-primary">More About Us</h5>
@@ -160,7 +162,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-center position-relative">
-                    <img src="Images/female-medical-doctor-669x1024.png.png" alt="Dentist" class="img-fluid main-img">
+                    <img src="Images/choose.png" alt="Dentist" class="img-fluid main-img">
                 </div>
                 <div class="col-md-4">
                     <div class="consultation-box bg-white p-4 shadow rounded">
@@ -178,33 +180,52 @@
         </div>
     </section>
 
+  
         <!-- Statistics Section -->
-    <section class="statistics py-5 bg-light">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-3">
-                    <img src="Images/div.elementor-widget-container-3.png" alt="">
-                    <h3>1,200+</h3>
-                    <p>Happy Clients</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="Images/div.elementor-widget-container-2.png" alt="">
-                    <h3>15+</h3>
-                    <p>Years of Experience</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="Images/div.elementor-widget-container-1.png" alt="">
-                    <h3>70+</h3>
-                    <p>Doctor & Staff</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="Images/div.elementor-widget-container.png" alt="">
-                    <h3>340+</h3>
-                    <p>Online Appointments</p>
+        <section class="statistics py-5 bg-light">
+            <div class="container-fluid">
+                <div class="row justify-content-around">
+                    <!-- Stat 1 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-center stat-box">
+                        <img src="Images/div.elementor-widget-container-3.png" alt="Happy Clients" class="stat-icon">
+                        <div>
+                            <h3>1,200<span>+</span></h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+    
+                    <!-- Stat 2 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-center stat-box">
+                        <img src="Images/div.elementor-widget-container-2.png" alt="Years Experience" class="stat-icon">
+                        <div>
+                            <h3>15<span>+</span></h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+    
+                    <!-- Stat 3 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-center stat-box">
+                        <img src="Images/div.elementor-widget-container-1.png" alt="Doctors & Staff" class="stat-icon">
+                        <div>
+                            <h3>70<span>+</span></h3>
+                            <p>Doctor & Staff</p>
+                        </div>
+                    </div>
+    
+                    <!-- Stat 4 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-center stat-box">
+                        <img src="Images/div.elementor-widget-container.png" alt="Online Appointment" class="stat-icon">
+                        <div>
+                            <h3>340<span>+</span></h3>
+                            <p>Online Appointment</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    
+       
+    
 
     <section class="services-section" id="services">
         <div class="container">
@@ -230,82 +251,93 @@
         </div>
     </section>
 
-      <!-- Our Services Section -->
-    <section class="our-services text-center py-5">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="service-card position-relative">
-                        <img src="Images/div.elementor-widget-wrap-3.png" class="img-fluid service-img" alt="Teeth Checkup">
-                        <div class="service-text-overlay">
-                            <img src="Images/tooth-insurance.png.png" alt="icon" class="service-icon">
-                            <h4>Teeth Checkup</h4>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="text-primary">Learn More →</a>
+
+        <!-- Our Services Section -->
+        <section class="our-services py-5">
+            <div class="container-fluid text-center">
+                <!-- Section Title -->
+                <p class="services-subtitle">Our Services</p>
+                <h2 class="services-title">Services</h2>
+                <p class="services-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Aenean commodo ligula aenean massa.</p>
+    
+                <!-- Services Grid -->
+                <div class="row g-4 mt-4">
+                    <!-- Service Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card" style="background-image: url('Images/div.elementor-widget-wrap-2.png');">
+                            <div class="service-content">
+                                <img src="Images/tooth-insurance.png.png" alt="Icon" class="service-icon">
+                                <h4>Teeth Checkup</h4>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="learn-more">Learn More →</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card position-relative">
-                        <img src="Images/div.elementor-widget-wrap-4.png" class="img-fluid service-img" alt="Teeth Whitening">
-                        <div class="service-text-overlay">
-                            <img src="Images/tooth-insurance.png.png" alt="icon" class="service-icon">
-                            <h4>Teeth Whitening</h4>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="text-primary">Learn More →</a>
+    
+                    <!-- Service Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card" style="background-image: url('Images/div.elementor-widget-wrap-4.png');">
+                            <div class="service-content">
+                                <img src="Images/whitening.png.png" alt="Icon" class="service-icon">
+                                <h4>Teeth Whitening</h4>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="learn-more">Learn More →</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card position-relative">
-                        <img src="Images/div.elementor-widget-wrap-5.png" class="img-fluid service-img" alt="Dental Braces">
-                        <div class="service-text-overlay">
-                            <img src="Images/tooth-insurance.png.png" alt="icon" class="service-icon">
-                            <h4>Dental Braces</h4>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="text-primary">Learn More →</a>
+    
+                    <!-- Service Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card" style="background-image: url('Images/div.elementor-widget-wrap-1.png');">
+                            <div class="service-content">
+                                <img src="Images/braces.png.png" alt="Icon" class="service-icon">
+                                <h4>Dental Braces</h4>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="learn-more">Learn More →</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card position-relative">
-                        <img src="Images/div.elementor-widget-wrap.png" class="img-fluid service-img" alt="Teeth Implants">
-                        <div class="service-text-overlay">
-                            <img src="Images/tooth-insurance.png.png" alt="icon" class="service-icon">
-                            <h4>Teeth Implants</h4>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="text-primary">Learn More →</a>
+    
+                    <!-- Service Card 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card" style="background-image: url('Images/div.elementor-widget-wrap-3.png');">
+                            <div class="service-content">
+                                <img src="Images/implant.png.png" alt="Icon" class="service-icon">
+                                <h4>Teeth Implants</h4>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="learn-more">Learn More →</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card position-relative">
-                        <img src="Images/div.elementor-widget-wrap-2.png" class="img-fluid service-img" alt="Dental Filling">
-                        <div class="service-text-overlay">
-                            <img src="Images/tooth-insurance.png.png" alt="icon" class="service-icon">
-                            <h4>Dental Filling</h4>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="text-primary">Learn More →</a>
+    
+                    <!-- Service Card 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card" style="background-image: url('Images/div.elementor-widget-wrap-4.png');">
+                            <div class="service-content">
+                                <img src="Images/dental-fillings.png.png" alt="Icon" class="service-icon">
+                                <h4>Dental Filling</h4>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="learn-more">Learn More →</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card position-relative">
-                        <img src="Images/div.elementor-widget-wrap-3.png" class="img-fluid service-img" alt="Cosmetic">
-                        <div class="service-text-overlay">
-                            <img src="Images/tooth-insurance.png.png" alt="icon" class="service-icon">
-                            <h4>Cosmetic</h4>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="text-primary">Learn More →</a>
+    
+                    <!-- Service Card 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card" style="background-image: url('Images/div.elementor-widget-wrap-2.png');">
+                            <div class="service-content">
+                                <img src="Images/denture.png.png" alt="Icon" class="service-icon">
+                                <h4>Cosmetic</h4>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="learn-more">Learn More →</a>
+                            </div>
                         </div>
                     </div>
+    
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    
     <!-- Our Testimonial Section -->
     <section class="testimonial-section py-5" id="testimonials">
         <div class="container">
@@ -365,13 +397,13 @@
                 <button class="contact-btn">The Best Services</button>
                 <h2 class="contact-title">Dedicated to Give You The Best Services</h2>
                 <p class="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.</p>
-                <a href="#" class="btn btn-primary">Contact Us</a>
+                <a href="#" class="btn btn-primary cbc">Contact Us</a>
             </div>
 
             <!-- Right Side: Image -->
             <div class="col-md-6">
                 <div class="contact-image">
-                    <img src="Images/div.elementor-widget-wrap.png" height="440px" width="650px" alt="Dental Service">
+                    <img src="Images/dentist image.jpg" height="440px" width="650px" alt="Dental Service">
                 </div>
             </div>
         </div>
@@ -380,44 +412,53 @@
 
 
     <!-- Blogs Section -->
-    <section class="blogs-section py-5" id="blogs">
-        <div class="container">
-            <button class="blogs-btn btn-white text-primary" style="margin-left: 550px;">Our Blogs</button>
-            <h2 class="blogs-title text-center">Blogs & </h2>
-            <p class="blogs-text" style="white-space:pre;text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-  Aenean commodo ligula eget dolor. Aenean massa.</p>
-            
-            <div class="row mt-4 ">
+    <section class="blogs-section py-5">
+        <div class="container-fluid">
+            <!-- Section Title -->
+            <div class="text-center">
+                <button class="blogs-btn">Our Blogs</button>
+                <h2 class="blogs-title">Blogs & Insights</h2>
+                <p class="blogs-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Aenean commodo ligula eget dolor. Aenean massa.</p>
+            </div>
+
+            <!-- Blog Cards -->
+            <div class="row mt-4">
                 <!-- Blog Card 1 -->
-                <div class="col-md-4">
-                    <div class="blog-card ">
-                        <img src="Images/div.elementor-widget-wrap-2.png" width="350px" alt="Blog 1">
-                        <span class="category text-primary" style="text-align: start;">News</span>
-                        <h5 style="text-align: center;">Oral Cancer Awareness: Signs, Symptoms, and Prevention</h5>
-                        <p  style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                        <a href="#" class="btn btn-primary">Read More →</a>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="Images/blog1.png" alt="Blog 1">
+                            <span class="category news">News</span>
+                        </div>
+                        <h5>Oral Cancer Awareness: Signs, Symptoms, and Prevention</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <a href="#" class="btn btn-primary bgb">Read More →</a>
                     </div>
                 </div>
-<br>
+
                 <!-- Blog Card 2 -->
-                <div class="col-md-4 ">
-                    <div class="blog-card ms-5">
-                        <img src="Images/div.elementor-widget-wrap-3.png"  width="280px" height="280px" alt="Blog 2">
-                        <span class="category text-start text-primary">Tips</span>
-                        <h5  style="text-align: center;">The Dos and Don’ts of Teeth Whitening: Expert Advice</h5>
-                        <p  style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                        <a href="#" class="btn btn-primary">Read More →</a>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="Images/blog2.png" alt="Blog 2">
+                            <span class="category tips">Tips</span>
+                        </div>
+                        <h5>The Dos and Don’ts of Teeth Whitening: Expert Advice</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <a href="#" class="btn btn-primary bgb">Read More →</a>
                     </div>
                 </div>
 
                 <!-- Blog Card 3 -->
-                <div class="col-md-4">
-                    <div class="blog-card ms-3">
-                        <img src="Images/div.elementor-widget-wrap-4.png"   width="300px" height="280px" alt="Blog 3">
-                        <span class="category text-start text-primary">Health</span>
-                        <h5  style="text-align: center;">Oral Health for All Ages: Tips for Kids, Teens, and Adults</h5>
-                        <p  style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                        <a href="#" class="btn btn-primary">Read More →</a>
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="Images/blog3.png" alt="Blog 3">
+                            <span class="category health">Health</span>
+                        </div>
+                        <h5>Oral Health for All Ages: Tips for Kids, Teens, and Adults</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <a href="#" class="btn btn-primary bgb">Read More →</a>
                     </div>
                 </div>
             </div>
@@ -439,7 +480,7 @@
     
                     <!-- Right Content (Doctor Image) -->
                     <div class="col-md-4 text-center" style="float: right;">
-                        <img src="Images/dentistlogo.png.png" alt="Dentist" height="200px" width="200px" style="float: right;" class="img-fluid appointment-image">
+                        <img src="Images/dentist-hold-with-denture.png.png" alt="Dentist" height="200px" width="200px" style="float: right;background: url(Images/appointment\ bg.png);" class="img-fluid appointment-image">
                     </div>
                 </div>
             </div>
@@ -502,14 +543,8 @@
                 </div>
             </footer>
         
-        <script src="script.js"></script>
-    </body>
-    </html>
-    
+            <script src="script.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
