@@ -21,78 +21,89 @@
         </div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <!-- Logo -->
-            <a href="#" class="logo">
-                <img src="Images/logo 1.png" alt="Dental Logo" height="50"> 
-                <span>DENTAL ALWAYS SMILE</span>
-            </a>
-            
-            <!-- Menu Button for Mobile -->
-            <span class="menu-btn" onclick="toggleMenu()">☰</span>
-
-            <!-- Navbar Links -->
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" onclick="toggleDropdown()">Pages </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#appointment">Appointment</a></li>
-                        <li><a href="#blogs">Blogs</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            
-            <!-- Appointment Button -->
-            <a href="#appointment" class="btn btn-primary appointment-btn">Make an Appointment</a>
-        </div>
-    </nav>
-
+   
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="Images/logo 1.png" alt="Dental Logo" height="50">
+                   
+                </a>
     
+                <!-- Mobile Menu Button -->
+                <button class="navbar-toggler" type="button" onclick="toggleMenu()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                        
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" onclick="toggleDropdown()">Pages</a>
+                            <ul class="dropdown-menu" id="dropdownMenu">
+                                <li><a class="dropdown-item" href="#">Appointment</a></li>
+                                <li><a class="dropdown-item" href="#">Blogs</a></li>
+                                <li><a class="dropdown-item" href="#">Testimonials</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Appointment Button -->
+                <a href="#" class="btn btn-primary appointment-btn">Make an Appointment</a>
+            </div>
+        </nav>
+  
     <!-- Hero Section -->
     <header class="hero-section position-relative">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Left Side: Text & Form -->
+                
+                <!-- Left Side: Text Content -->
                 <div class="col-lg-6 text-center text-lg-start">
                     <span class="badge bg-warning text-dark">👋 Hey! We Are Dentic</span>
                     <h1 class="display-5 fw-bold mt-3">Helping You to Bring Back Your Happy Smile</h1>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean commodo ligula eget dolor.</p>
-                    
-                    <!-- Appointment Form -->
-                    <div class="appointment-form bg-white p-4 shadow rounded ">
-                        <form class="row g-3" style="width: 530px;">
-                            <div class="col-md-4 ">
-                                <label for="email" class="form-label"><img src="Images/Group.png" alt="">Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Your Email">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="phone" class="form-label"><img src="Images/Frame-1.png" alt="">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="Telephone">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="date" class="form-label"><img src="Images/Frame.png" alt="">Date</label>
-                                <input type="date" class="form-control" id="date">
-                            </div>
-                            <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-primary" style="width: 150px;"><img src="Images/.png" alt=""> Book Now</button>
-                            </div>
-                        </form>
-                    </div>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.
+                    </p>
                 </div>
 
                 <!-- Right Side: Image & Review -->
-                <div class="col-lg-6 text-center position-relative" >
+                <div class="col-lg-6 text-center position-relative">
                     <img src="Images/home bg.png" alt="Dentist" class="img-fluid dentist-image">
-                    
-                    
+                </div>
             </div>
+        </div>
+
+        <!-- Appointment Form (Overlayed on Image) -->
+        <div class="container position-absolute start-50 translate-middle-x appointment-form">
+            <form class="row g-3 bg-white shadow p-4 rounded">
+                <div class="col-md-4">
+                    <label for="email" class="form-label"><img src="Images/Group.png" alt=""> Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+                <div class="col-md-4">
+                    <label for="phone" class="form-label"><img src="Images/Frame-1.png" alt=""> Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Telephone">
+                </div>
+                <div class="col-md-4">
+                    <label for="date" class="form-label"><img src="Images/Frame.png" alt=""> Date</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary" style="width: 200px;">
+                        <img src="images/book-icon.png" alt=""><img src="Images/.png" alt=""> Book Now
+                    </button>
+                </div>
+            </form>
         </div>
     </header>
    
@@ -133,8 +144,8 @@
                         <li style="flex-basis: 45%;">✅ Always Monitored</li>
                     </ul>
                     <div class="buttons">
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                        <a href="#" class="btn btn-outline-primary">Make an Appointment</a>
+                        <a href="#" class="btn btn-primary p-3">Learn More</a>
+                        <a href="#" class="btn btn-outline-primary p-3">Make an Appointment</a>
                     </div>
                 </div>
             </div>
@@ -222,35 +233,40 @@
                     </div>
                 </div>
             </div>
-        </section>
-    
-       
-    
-
-    <section class="services-section" id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="Images/div.elementor-widget-wrap-2.png" class="service-img img-fluid" style="width: 400px;" alt="Service 1">
-                </div>
-                <div class="col-md-4 d-flex flex-column justify-content-between">
-                    <div class="service-text bg-primary text-white text-center p-4 mb-2">
-                        <h3>The Best Services</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et magna.</p>
+        </section>     
+         
+            <!-- Services Section -->
+            <section class="services">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Left Side (4 Boxes - Text & Image) -->
+                        <div class="col-lg-6 col-md-12 left-side">
+                            <div class="row">
+                                <div class="col-md-6 box blue-bg">
+                                    <h3 class="text-white">The Best Services</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et magna.</p>
+                                </div>
+                                <div class="col-md-6 box">
+                                    <img src="Images/div.elementor-widget-wrap-2.png" alt="Service Image">
+                                </div>
+                                <div class="col-md-6 box">
+                                    <img src="Images/div.elementor-widget-wrap-5.png" alt="Service Image">
+                                </div>
+                                <div class="col-md-6 box dark-bg">
+                                    <h3 class="text-white">Doctor</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore et magna.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Right Side (Full-Height Image) -->
+                        <div class="col-lg-6 col-md-12 right-side">
+                            <img src="Images/our services.png" alt="Main Service Image">
+                        </div>
                     </div>
-                    <div class="service-text bg-dark text-white text-center p-4">
-                        <h3>Expert Doctors</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                  
                 </div>
-                <div class="col-md-4">
-                    <img src="Images/our services.png" class="service-img img-fluid" alt="Service 2">
-                </div>
-            </div>
-        </div>
-    </section>
-
+            </section>
+      
 
         <!-- Our Services Section -->
         <section class="our-services py-5">
