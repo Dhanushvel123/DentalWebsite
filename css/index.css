@@ -3,72 +3,42 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: Arial, sans-serif;
 }
 
-/* Navbar */
+/* General Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #fff;
-    padding: 15px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px   0px;
 }
 
-/* Container */
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-/* Logo */
-.logo {
+.navbar-brand {
     display: flex;
     align-items: center;
-    font-size: 22px;
     font-weight: bold;
-    text-decoration: none;
-    color: #333;
 }
 
-.logo img {
+.navbar-brand img {
     margin-right: 10px;
 }
 
-/* Navbar Links */
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin: 0 15px;
-    position: relative;
-}
-
-.nav-links a {
+.brand-text {
+    font-size: 20px;
+    font-weight: bold;
     color: #333;
-    text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
+.navbar-nav .nav-link:hover {
     color: #007bff;
 }
 
@@ -76,17 +46,9 @@ body {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #fff;
-    list-style: none;
+    background-color: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
     border-radius: 5px;
-    top: 100%;
-    left: 0;
-}
-
-.dropdown-menu li {
-    padding: 5px 10px;
 }
 
 .dropdown-menu.show {
@@ -95,57 +57,46 @@ body {
 
 /* Appointment Button */
 .appointment-btn {
-    display: block;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 14px;
+    border-radius: 5px;
 }
 
 /* Mobile Menu Button */
-.menu-btn {
-    display: none;
+.navbar-toggler {
     font-size: 24px;
-    color: #333;
+    border: none;
+    background: none;
     cursor: pointer;
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) { /* Tablet */
-    .nav-links {
-        justify-content: center;
-        width: 100%;
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
     }
 }
 
-@media (max-width: 768px) { /* Mobile */
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-links {
+@media (max-width: 768px) {
+    .navbar-collapse {
         display: none;
         flex-direction: column;
-        width: 100%;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         position: absolute;
         top: 60px;
         left: 0;
-        background-color: #fff;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        padding: 10px 0;
+        width: 100%;
     }
 
-    .nav-links.show {
+    .navbar-collapse.show {
         display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
     }
 
     .dropdown-menu {
         position: relative;
         box-shadow: none;
-        background: none;
     }
 
     .appointment-btn {
@@ -156,59 +107,59 @@ body {
     }
 }
 
-
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
 
 /* Hero Section */
 .hero-section {
-    background-color: #f8f9fa;
-    padding: 80px 0;
+    padding: 100px 0;
     position: relative;
-}
-
-/* Form Styling */
-.appointment-form {
-    width: 180%;
-    border-radius: 10px;
-    margin-top: 20px;
 }
 
 /* Right Side Image */
 .dentist-image {
     max-width: 100%;
-    background: url("/Images/dentist-image.jpg") center no-repeat center ;
-    height: 600px;
+    height: auto;
+}
 
+/* Appointment Form (Overlayed on Image) */
+.appointment-form {
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    border-radius: 10px;
 }
 
 
 /* Media Queries for Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 992px) { /* Tablet */
     .hero-section {
         text-align: center;
     }
-   
+
+    .appointment-form {
+        width: 90%;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Mobile */
     .hero-section {
         padding: 50px 0;
     }
+
     .appointment-form {
-        margin-top: 0;
-        width: 100%;
+        width: 95%;
+        bottom: -30px;
     }
-    .dentist-image {
-        max-width: 100%;
-    }
-   
 }
 
-@media (max-width: 576px) {
-    .appointment-form {
-        padding: 15px;
-    }
-   
-}
+
 .dental-section {
     display: flex;
     align-items: center;
@@ -273,8 +224,11 @@ body {
     margin: 5px 0;
 }
 
-.image-container {
+.image-container img{
     position: relative;
+    width: 70%;
+    height: auto;
+
 }
 
 .main-dentist {
@@ -411,6 +365,78 @@ h3 span {
 
     p {
         font-size: 14px;
+    }
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Services Section */
+.services {
+    padding: 20px 0;
+}
+
+/* Left Side: 4 Boxes */
+.left-side {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    position: relative;
+    /* height: 250px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blue-bg {
+    background-color: #3B82F6;
+}
+
+.dark-bg {
+    background-color: #030b25;
+}
+
+/* Right Side: Full-Height Image */
+.right-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablet */
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .left-side {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+        height: 200px;
+    }
+
+    .right-side img {
+        height: auto;
     }
 }
 
