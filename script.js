@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Dental website loaded successfully!");
+    console.log("Navbar loaded successfully!");
 });
 
 function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("show");
+    document.getElementById("navbarNav").classList.toggle("show");
 }
 
 function toggleDropdown() {
-    document.querySelector(".dropdown-menu").classList.toggle("show");
+    document.getElementById("dropdownMenu").classList.toggle("show");
 }
